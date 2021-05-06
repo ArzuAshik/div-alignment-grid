@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        height: 100vh;
+        width: 100vw;
+        padding: 10px;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        grid-gap: 10px;
+        grid-template-areas:
+          ". . a . ."
+          ". b c d ."
+          "e f g h i"
+          ". j k l ."
+          ". . m . .";
+        background: lightgray;
+        animation: boxShift 59s linear infinite;
+      }
+
+      @keyframes boxShift {
+        0% {
+          grid-template-areas:
+            ". . a . ."
+            ". b c d ."
+            "e f g h i"
+            ". j k l ."
+            ". . m . .";
+        }
+        8% {
+          grid-template-areas:
+            ". . m . ."
+            ". a b c ."
+            "d e f g h"
+            ". i j k ."
+            ". . l . .";
+        }
+        16% {
+          grid-template-areas:
+            ". . l . ."
+            ". m a b ."
+            "c d e f g"
+            ". h i j ."
+            ". . k . .";
+        }
+        25% {
+          grid-template-areas:
+            ". . k . ."
+            ". l m a ."
+            "b c d e f"
+            ". g h i ."
+            ". . j . .";
+        }
+        33% {
+          grid-template-areas:
+            ". . j . ."
+            ". k l m ."
+            "a b c d e"
+            ". f g h ."
+            ". . i . .";
+        }
+        41% {
+          grid-template-areas:
+            ". . i . ."
+            ". j k l ."
+            "m a b c d"
+            ". e f g ."
+            ". . h . .";
+        }
+        50% {
+          grid-template-areas:
+            ". . h . ."
+            ". i j k ."
+            "l m a b c"
+            ". d e f ."
+            ". . g . .";
+        }
+        58% {
+          grid-template-areas:
+            ". . g . ."
+            ". h i j ."
+            "k l m a b"
+            ". c d e ."
+            ". . f . .";
+        }
+        66% {
+          grid-template-areas:
+            ". . f . ."
+            ". g h i ."
+            "j k l m a"
+            ". b c d ."
+            ". . e . .";
+        }
+        75% {
+          grid-template-areas:
+            ". . e . ."
+            ". f g h ."
+            "i j k l m"
+            ". a b c ."
+            ". . d . .";
+        }
+        83% {
+          grid-template-areas:
+            ". . d . ."
+            ". e f g ."
+            "h i j k l"
+            ". m a b ."
+            ". . c . .";
+        }
+        91% {
+          grid-template-areas:
+            ". . c . ."
+            ". d e f ."
+            "g h i j k"
+            ". l m a ."
+            ". . b . .";
+        }
+        100% {
+          grid-template-areas:
+            ". . b . ."
+            ". c d e ."
+            "f g h i j"
+            ". k l m ."
+            ". . a . .";
+        }
+      }
+
+      .item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgb(241, 241, 241, 0.2);
+        border-radius: 20px 70px;
+        font-size: 2.5rem;
+      }
+      .item:nth-child(3n) {
+        border-radius: 70px 20px;
+      }
+
+      .a {
+        grid-area: a;
+        background: #1abc9c;
+      }
+      .b {
+        grid-area: b;
+        background: #3498db;
+      }
+      .c {
+        grid-area: c;
+        background: #9b59b6;
+      }
+      .d {
+        grid-area: d;
+        background: #f39c12;
+      }
+      .e {
+        grid-area: e;
+        background: #2ecc71;
+      }
+      .f {
+        grid-area: f;
+        background: #2980b9;
+      }
+      .g {
+        grid-area: g;
+        background: #16a085;
+      }
+      .h {
+        grid-area: h;
+        background: #95a5a6;
+      }
+      .i {
+        grid-area: i;
+        background: #8e44ad;
+      }
+      .j {
+        grid-area: j;
+        background: #e67e22;
+      }
+      .k {
+        grid-area: k;
+        background: #9b59b6;
+      }
+      .l {
+        grid-area: l;
+        background: #f1c40f;
+      }
+      .m {
+        grid-area: m;
+        background: #27ae60;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item a">HTML 5</div>
+      <div class="item b">CSS 3</div>
+      <div class="item c">Javascript</div>
+      <div class="item d">React.js</div>
+      <div class="item e">Nodejs</div>
+      <div class="item f">Express.js</div>
+      <div class="item g">Mongodb</div>
+      <div class="item h">Redux</div>
+      <div class="item i">Firebase</div>
+      <div class="item j">MaterialUI</div>
+      <div class="item k">Bootstrap</div>
+      <div class="item l">Fontawesome</div>
+      <div class="item m">Wordpress</div>
+    </div>
+  </body>
+</html>
